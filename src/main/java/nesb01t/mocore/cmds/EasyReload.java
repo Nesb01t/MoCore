@@ -14,9 +14,8 @@ public class EasyReload extends Command {
     @Override
     public boolean execute(CommandSender sender, String commandLabel, String[] args) {
         Player player = (Player) sender;
-        sender.sendMessage("try to reload server...");
-
-        pluginInstance.getServer().reload();
+        player.sendMessage("try to reload server...");
+        player.performCommand("reload");
         return false;
     }
 }
