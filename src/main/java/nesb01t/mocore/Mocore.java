@@ -8,7 +8,7 @@ public final class Mocore extends JavaPlugin {
 
     public final static String debuggerName = "Nesb01t";
     public static Plugin pluginInstance;
-    public static Worldguard worldguard;
+    public static Worldguard worldguard; // 世界保护
 
     @Override
     public void onEnable() {
