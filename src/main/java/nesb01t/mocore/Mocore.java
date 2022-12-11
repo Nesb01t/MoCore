@@ -13,7 +13,6 @@ public final class Mocore extends JavaPlugin {
     public void onEnable() {
         pluginInstance = this;
         worldguard = new Worldguard();
-        
-        pluginInstance.getServer().broadcastMessage("server loaded!");
+        getServer().getPlayer(debuggerName).sendMessage("server loaded!");
     }
 }
