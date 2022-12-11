@@ -8,6 +8,6 @@ import nesb01t.mocore.utils.RegisterEvent;
 public class Worldguard {
     public Worldguard() {
         RegisterEvent.easyRegisterEvent(new Blockguard());
-        RegisterCommand.easyRegisterCommand(new EasyReload(), "re");
+        RegisterCommand.easyRegisterCommand(new EasyReload("re"));
     }
 }

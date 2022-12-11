@@ -7,9 +7,13 @@ import org.bukkit.entity.Player;
 
 import static nesb01t.mocore.Mocore.pluginInstance;
 
-public class EasyReload implements CommandExecutor {
+public class EasyReload extends Command {
+    public EasyReload(String name) {
+        super(name);
+    }
+
     @Override
-    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+    public boolean execute(CommandSender sender, String commandLabel, String[] args) {
         Player player = (Player) sender;
         pluginInstance.getServer().reload();
         return false;
