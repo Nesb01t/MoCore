@@ -1,10 +1,7 @@
 package nesb01t.mocore;
 
 import nesb01t.mocore.instance.Worldguard;
-import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
-
-import java.util.Objects;
 
 public final class Mocore extends JavaPlugin {
 
@@ -20,5 +17,6 @@ public final class Mocore extends JavaPlugin {
 
     @Override
     public void onLoad() {
+        pluginInstance.getServer().broadcastMessage("server loaded!");
     }
 }
