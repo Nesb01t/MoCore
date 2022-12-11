@@ -1,0 +1,4 @@
+name: Mocore
+version: '${project.version}'
+main: nesb01t.mocore.Mocore
+api-version: 1.14
