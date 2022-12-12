@@ -1,0 +1,8 @@
+on break:
+    if player is not op:
+        cancel event
+
+on right click:
+    if player is not op:
+        if event-block is not ender chest:
+            cancel event
