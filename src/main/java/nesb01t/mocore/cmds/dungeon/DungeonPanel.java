@@ -11,12 +11,17 @@ public class DungeonPanel extends Command {
         super(name);
     }
 
+    // 打开面板
+    public static void openPanel(Player player) {
+        Inventory inventory = Bukkit.createInventory(player, 54);
+        player.openInventory(inventory);
+    }
+
     @Override
     public boolean execute(CommandSender sender, String commandLabel, String[] args) {
         Player player = (Player) sender;
-
-        Inventory inventory = Bukkit.createInventory(player, 54);
-        player.openInventory(inventory);
+        openPanel(player);
         return false;
     }
+
 }

@@ -1,24 +1,21 @@
 package nesb01t.mocore.cmds.dungeon;
 
 import nesb01t.mocore.instance.DungeonUI;
-import nesb01t.mocore.utils.DungeonPoint;
-import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class DungeonPointSave extends Command {
-    public DungeonPointSave(String name) {
+public class DungeonPointTeleport extends Command {
+    public DungeonPointTeleport(String name) {
         super(name);
     }
 
     @Override
     public boolean execute(CommandSender sender, String commandLabel, String[] args) {
         Player player = (Player) sender;
-        DungeonPoint dungeonPoint = new DungeonPoint(player.getLocation(), "测试", 1);
-        DungeonUI.easyYaml.config.set("hello", dungeonPoint);
-        DungeonUI.easyYaml.saveYaml();
+        Location location = (Location) DungeonUI.easyYaml.config.get("hello");
+        player.teleport(location);
         return false;
     }
 }
