@@ -13,6 +13,7 @@ public class PanelHandler implements Listener {
         String name = item.getItemMeta().getDisplayName();
         return name;
     }
+
     @EventHandler
     public void onInventoryClick(InventoryClickEvent event) {
         String name = getEventItem(event);

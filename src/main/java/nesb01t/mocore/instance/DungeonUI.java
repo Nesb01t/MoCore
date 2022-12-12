@@ -13,9 +13,9 @@ public class DungeonUI {
 
     public DungeonUI() {
         easyYaml = new EasyYaml("dungeon_location.yml");
+        RegisterEvent.easyRegisterEvent(new PanelHandler());
         RegisterCommand.easyRegisterCommand(new DungeonPanel("dp"));
         RegisterCommand.easyRegisterCommand(new DungeonPointSave("dps"));
         RegisterCommand.easyRegisterCommand(new DungeonPointTeleport("dpt"));
-        RegisterEvent.easyRegisterEvent(new PanelHandler());
     }
 }
