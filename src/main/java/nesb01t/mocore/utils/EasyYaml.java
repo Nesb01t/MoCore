@@ -5,7 +5,6 @@ import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.YamlConfiguration;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class EasyYaml {
@@ -23,6 +22,14 @@ public class EasyYaml {
                 config.save(file);
             }
         } catch (IOException | InvalidConfigurationException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void saveYaml() {
+        try {
+            config.save(file);
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }

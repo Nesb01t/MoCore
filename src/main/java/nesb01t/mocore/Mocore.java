@@ -1,6 +1,5 @@
 package nesb01t.mocore;
 
-import nesb01t.mocore.cmds.dungeon.DungeonPanel;
 import nesb01t.mocore.instance.DungeonUI;
 import nesb01t.mocore.instance.Worldguard;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -17,6 +16,5 @@ public final class Mocore extends JavaPlugin {
         pluginInstance = this;
         worldguard = new Worldguard();
         dungeonUI = new DungeonUI();
-        getServer().getPlayer(debuggerName).sendMessage("server loaded!");
     }
 }
